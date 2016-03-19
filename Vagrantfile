@@ -26,4 +26,8 @@ Vagrant.configure(2) do |config|
     ansible.playbook = './provisioner/playbook.yml'
   end
 
+  config.push.define "heroku" do |push|
+    push.app = "safe-gorge-76327"
+  end
+
 end
